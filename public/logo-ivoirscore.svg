@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 160" fill="none" className="w-auto h-full">
+  <defs>
+    <!-- Background Gradient for Icon: Orange to Emerald -->
+    <linearGradient id="ivoirScoreGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#FF5D00" />
+      <stop offset="35%" stop-color="#FF7500" />
+      <stop offset="65%" stop-color="#05A367" />
+      <stop offset="100%" stop-color="#008850" />
+    </linearGradient>
+
+    <!-- Radial Glows for Orange (top-left) and Green (bottom-right) -->
+    <filter id="ambientHalo" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur" />
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0.95
+        0 0.4 0 0 0.38
+        0 0 0 0 0.05
+        0 0 0 0.45 0" in="blur" result="orangeGlow"/>
+      <feMerge>
+        <feMergeNode in="orangeGlow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ICON CONTAINER (Squircle with Ambient Glow) -->
+  <g filter="url(#ambientHalo)">
+    <rect x="18" y="18" width="124" height="124" rx="36" fill="url(#ivoirScoreGrad)" />
+  </g>
+
+  <!-- ELEPHANT & BASKETBALL EMBLEM (Pure White Silhouette) -->
+  <g transform="translate(40, 40) scale(1.02)" fill="#FFFFFF">
+    <!-- Elephant Ear (top left) -->
+    <path d="M 37 5 C 23 5 11 13 5 25 C 2 31 1 37 2 43 C 4 49 8 53 14 55 C 18 52 22 47 25 39 C 29 28 34 15 37 5 Z" />
+
+    <!-- Elephant Forehead, Tusk & Face Structure -->
+    <path d="M 38 5 C 32 17 27 30 23 42 C 20 49 17 54 12 57 C 7 59 3 65 5 71 C 7 76 12 78 17 76 C 21 74 23 68 24 62 C 26 53 29 46 34 39 C 35 45 37 53 38 61 C 39 69 40 75 43 79 C 46 83 51 82 53 76 C 55 69 52 60 50 52 C 48 42 45 28 42 15 C 41 11 40 7 38 5 Z" />
+
+    <!-- Elephant Tusk (curving forward & down) -->
+    <path d="M 22 49 C 21 57 18 66 12 72 C 8 76 6 77 5 76 C 6 71 11 63 16 57 C 19 53 21 50 22 49 Z" />
+
+    <!-- Elephant Trunk looping down and crossing into basketball curve -->
+    <path d="M 39 19 C 41 33 43 49 44 62 C 45 73 46 80 49 82 C 52 83 55 79 56 72 C 57 64 55 54 53 45 C 57 49 63 55 68 62 C 71 66 75 70 78 72 C 76 66 71 59 66 53 C 60 45 54 37 48 30 C 45 26 42 22 39 19 Z" />
+
+    <!-- Basketball Top Right Arc -->
+    <path d="M 44 5 C 57 7 68 14 74 24 C 70 26 63 31 55 38 C 51 31 48 21 44 5 Z" />
+
+    <!-- Basketball Mid Right Section -->
+    <path d="M 76 27 C 81 36 82 46 80 55 C 73 54 65 52 57 48 C 64 39 71 32 76 27 Z" />
+
+    <!-- Basketball Lower Right Section -->
+    <path d="M 79 59 C 76 69 69 76 61 80 C 60 75 60 69 61 62 C 67 61 73 60 79 59 Z" />
+
+    <!-- Basketball Bottom Base Curve -->
+    <path d="M 58 81 C 50 84 41 84 33 81 C 36 78 40 74 43 69 C 47 75 52 79 58 81 Z" />
+
+    <!-- Vertical Seam Arc -->
+    <path d="M 41 5 C 43 15 47 32 53 46 C 59 57 67 68 77 75 C 73 78 68 80 62 81 C 54 75 47 65 42 52 C 38 40 36 25 36 5 Z" opacity="0.95" />
+
+    <!-- Horizontal Equator Seam Arc -->
+    <path d="M 11 56 C 21 53 34 49 48 47 C 59 46 70 48 80 53 C 80 55 79 58 78 60 C 68 55 57 53 47 54 C 34 56 23 60 14 64 C 12 61 11 59 11 56 Z" />
+  </g>
+
+  <!-- WORDMARK: 'voirScore' (Clean Transparent Background) -->
+  <g transform="translate(172, 108)">
+    <!-- 'voir' in Rich Ivorian Emerald Green -->
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="82" font-weight="800" fill="#009B60" letter-spacing="-2.5px">
+      voir
+    </text>
+
+    <!-- Prominent Circular Dot on the 'i' matching the logo -->
+    <circle cx="89" cy="-68" r="10" fill="#009B60" />
+
+    <!-- 'Score' in Vibrant Ivorian Orange -->
+    <text x="146" y="0" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="82" font-weight="900" fill="#FF6B00" letter-spacing="-1.5px">
+      Score
+    </text>
+  </g>
+</svg>

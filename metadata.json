@@ -1,0 +1,6 @@
+{
+  "name": "VoirScore FIBB",
+  "description": "Application officielle de suivi des scores en direct, classements et box scores de basketball FIBB Côte d'Ivoire (N1_H & N2_H).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

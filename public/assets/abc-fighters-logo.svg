@@ -1,0 +1,55 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep crimson textured background -->
+  <defs>
+    <radialGradient id="abcBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#BA1A1A"/>
+      <stop offset="55%" stop-color="#990000"/>
+      <stop offset="100%" stop-color="#6B0000"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" rx="28" fill="url(#abcBg)"/>
+
+  <!-- Subtle basketball seam watermarks in background -->
+  <circle cx="100" cy="100" r="82" stroke="#520000" stroke-width="6" opacity="0.35"/>
+  <path d="M18 100 Q 100 70 182 100" stroke="#520000" stroke-width="5" fill="none" opacity="0.35"/>
+  <path d="M18 100 Q 100 130 182 100" stroke="#520000" stroke-width="5" fill="none" opacity="0.35"/>
+  <path d="M100 18 L 100 182" stroke="#520000" stroke-width="5" opacity="0.35"/>
+
+  <!-- Dynamic tilted 5-pointed star at top -->
+  <g filter="url(#shadow)">
+    <!-- Dynamic Star -->
+    <path d="M108 8 L114 26 L133 26 L118 37 L124 55 L108 43 L96 52 L101 36 L86 26 L103 26 Z" fill="#FFFFFF"/>
+
+    <!-- Basketball Outer Arc Ring -->
+    <circle cx="100" cy="92" r="46" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+
+    <!-- Basketball Inner Seams -->
+    <path d="M72 74 C86 85 114 85 128 74" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+    <path d="M68 95 C88 95 112 95 132 95" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+    <path d="M112 48 C112 75 112 95 112 110" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+
+    <!-- Abidjan City Skyline Silhouette (Plateau Towers) -->
+    <!-- Colored deep crimson/dark red sitting across lower basketball -->
+    <path d="M69 110 L69 98 L75 98 L75 92 L82 92 L82 98 L88 98 L88 84 L93 84 L93 80 L96 80 L96 84 L103 84 L103 88 L108 88 L108 82 L113 82 L113 86 L118 86 L118 90 L124 90 L124 96 L131 96 L131 110 Z" fill="#750000"/>
+
+    <!-- Stacked Bold Condensed Typography: ABIDJAN BASKETBALL CLUB -->
+    <!-- Line 1: ABIDJAN -->
+    <text x="100" y="130" text-anchor="middle" font-family="'Impact', 'Arial Black', 'Trebuchet MS', sans-serif" font-weight="900" font-size="25" letter-spacing="1.5" fill="#FFFFFF">
+      ABIDJAN
+    </text>
+
+    <!-- Line 2: BASKETBALL -->
+    <text x="100" y="157" text-anchor="middle" font-family="'Impact', 'Arial Black', 'Trebuchet MS', sans-serif" font-weight="900" font-size="20.5" letter-spacing="0.5" fill="#FFFFFF">
+      BASKETBALL
+    </text>
+
+    <!-- Line 3: CLUB -->
+    <text x="100" y="186" text-anchor="middle" font-family="'Impact', 'Arial Black', 'Trebuchet MS', sans-serif" font-weight="900" font-size="27" letter-spacing="3" fill="#FFFFFF">
+      CLUB
+    </text>
+  </g>
+</svg>
