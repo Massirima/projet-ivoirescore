@@ -21,6 +21,7 @@ import { PlayersSection } from './components/PlayersSection';
 import { StandingsSection } from './components/StandingsSection';
 import { ScoutsSection } from './components/ScoutsSection';
 import { ScoutFeedBufferSection } from './components/ScoutFeedBufferSection';
+import { McdVisualSection } from './components/McdVisualSection';
 import { DEFAULT_SCOUTS, INITIAL_SCOUT_FEED_EVENTS } from './adminData';
 import { INITIAL_MATCHES, TEAMS } from '../data/mockData';
 
@@ -29,7 +30,7 @@ interface AdminDashboardProps {
   onLogout: () => void;
 }
 
-export type AdminTab = 'matches' | 'scouts' | 'scout_feed' | 'standings' | 'teams' | 'players';
+export type AdminTab = 'matches' | 'scouts' | 'scout_feed' | 'mcd' | 'standings' | 'teams' | 'players';
 
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({ adminUser, onLogout }) => {
   const { isLight } = useTheme();
@@ -237,6 +238,25 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ adminUser, onLog
             </span>
           </button>
 
+          {/* Tab: MCD Visuel */}
+          <button
+            id="admin-tab-mcd"
+            onClick={() => setActiveTab('mcd')}
+            className={`px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 whitespace-nowrap transition cursor-pointer ${
+              activeTab === 'mcd'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/25'
+                : isLight ? 'text-slate-600 hover:text-slate-950 hover:bg-slate-100' : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <Activity className="w-4 h-4 text-emerald-400" />
+            <span>MCD & Schéma Visuel</span>
+            <span className={`px-1.5 py-0.5 rounded text-[10px] font-mono ${
+              activeTab === 'mcd' ? 'bg-white/20 text-white' : 'bg-emerald-500/15 text-emerald-400'
+            }`}>
+              12 tables
+            </span>
+          </button>
+
           {/* Tab: Standings */}
           <button
             onClick={() => setActiveTab('standings')}
@@ -309,6 +329,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ adminUser, onLog
               onClearBuffer={handleClearBuffer}
             />
           )}
+
+          {activeTab === 'mcd' && <McdVisualSection />}
 
           {activeTab === 'standings' && <StandingsSection />}
 
